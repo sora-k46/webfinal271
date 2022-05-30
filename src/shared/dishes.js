@@ -7,6 +7,7 @@ export const DISHES = [
     description: 'Fried rice is a dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat. It is often eaten by itself or as an accompaniment to another dish. Fried rice is a popular component of East Asian, Southeast Asian and certain South Asian cuisines, as well as a staple national dish of Indonesia. As a homemade dish, fried rice is typically made with ingredients left over from other dishes, leading to countless variations. [1] first developed during the Sui Dynasty in China and as such all fried rice dishes can trace their origins to Chinese fried rice.[1]',
     onSale: true,
     discount: 20,
+    like: 10,
   },
   {
     id: 1,
@@ -16,6 +17,7 @@ export const DISHES = [
     description: 'It is made with stir-fried wide rice noodles, a meat such as chicken, beef, pork, or seafood or tofu, garlic, straw mushrooms, and gai lan (Thai: คะน้า; RTGS: khana). The dish is then covered in a sauce made of stock and tapioca starch or cornstarch. It is seasoned with sweet soy sauce, fish sauce, sugar, and black pepper. In Thailand people often sprinkle some additional sugar, fish sauce, sliced chillies preserved in vinegar (with some of the vinegar), and ground dried chillies on the dish.',
     onSale: true,
     discount: 10,
+    like: 30,
   },
   {
     id: 2,
@@ -23,18 +25,21 @@ export const DISHES = [
     image: '/assets/images/basilfriedrice.webp',
     featured: true,
     description: 'Phat kaphrao consists of meat such as pork, chicken, beef, and seafood stir fried with Thai holy basil and garlic. It is served with rice and topped up (optional) with fried eggs or khai dao (Thai: ไข่ดาว). The main seasonings are soy sauce, Thai fish sauce, oyster sauce (optional), cane sugar, and bird\'s eye chili.',
+    like: 127,
   },
   {
     id: 3,
     name: 'Pork Meatball',
     image: '/assets/images/porkmeatball.webp',
     description: 'A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning.[1] Meatballs are cooked by frying, baking, steaming, or braising in sauce. There are many types of meatballs using different types of meats and spices. The term is sometimes extended to meatless versions based on vegetables or fish; the latter are also commonly known as fishballs.',
+    like: 57,
   },
   {
     id: 4,
     name: 'Green Curry',
     image: '/assets/images/greencurry.webp',
     description: 'The name "green" curry derives from the color of the dish, which comes from green chillies.[1] The "sweet" in the Thai name (wan means \'sweet\') refers to the particular color green itself and not to the taste of the curry.[2] As this is a Thai curry based on coconut milk and fresh green chillies, the color comes out creamy mild green or, as this color is called in Thai, "sweet green".[3] Its ingredients are not exactly fixed. The curry is not necessarily sweeter than other Thai curries but, although the spiciness varies, it tends to be more pungent than the milder red curries.[3] Green curry evolved during the reign of King Rama VI or Rama VII, between the years 1908-1926.[4]',
+    like: 32,
   },
   {
     id: 5,
@@ -43,5 +48,6 @@ export const DISHES = [
     description: 'Green papaya salad (Lao: ຕຳຫມາກຫຸ່ງ and Thai: ส้มตำ) is a spicy salad made from shredded unripe papaya, that possibly originated in Laos but nowadays is eaten throughout Continental Southeast Asia (Cambodia, Laos, Myanmar, Thailand, and Vietnam). The Thai variation som tam has been listed at number 46 on World\'s 50 most delicious foods[4] compiled by CNN Go in 2011[5] and 2018.[6] Papaya salad was featured as Laos\' national costume at the Miss Grand International 2021 pageant.[7]',
     onSale: true,
     discount: 30,
+    like: 278,
   },
 ]
