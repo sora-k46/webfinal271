@@ -32,6 +32,16 @@ function Header() {
               About me
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to='/order' >
+              Order Food
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to='/cart' >
+              Cart
+            </NavLink>
+          </NavItem>
         </Nav>
       </Collapse>
     </Navbar>

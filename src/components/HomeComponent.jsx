@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useParams } from 'react-router';
 import { DISHES } from '../shared/dishes';
 import Photo from './Photo';
+import OrderPage from '../pages/OrderPage';
+import CartPage from '../pages/CartPage';
 
 const PhotoWithId = (props) => {
   let { photoid } = useParams()
@@ -30,6 +32,8 @@ function HomeComponent() {
           <Route exact path='/about' element={<AboutPage />} />
           <Route exact path='/photo' element={<PhotoPage />} />
           <Route path='/photo/:photoid' element={<PhotoWithId />} />
+          <Route exact path='/order' element={<OrderPage dishes={DISHES} />} />
+          <Route exact path='/cart' element={<CartPage />} />
         </Routes>
         <Footer />
       </Router>
