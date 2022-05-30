@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { CardSubtitle, FormFeedback, Button, Form, FormGroup, Input, Label, Card, CardImg, CardText, CardTitle } from 'reactstrap'
+import { Modal, ModalHeader, ModalBody, CardSubtitle, FormFeedback, Button, Form, FormGroup, Input, Label, Card, CardImg, CardText, CardTitle } from 'reactstrap'
 
 function RenderComment(props) {
   const comment = props.comments.map((com, index) => {
@@ -31,6 +31,7 @@ export default class Photo extends Component {
       message: '',
       score: null,
       like: false,
+      likeCount: props.dish.like,
       touched: {
         firstname: false,
         lastname: false,
@@ -38,13 +39,19 @@ export default class Photo extends Component {
         message: false,
       },
       comments: [],
+      isModalOpen: false,
     }
 
     this.handleOnChange = this.handleOnChange.bind(this)
     this.handleOnSubmit = this.handleOnSubmit.bind(this)
     this.handleBlur = this.handleBlur.bind(this)
     this.handleLike = this.handleLike.bind(this)
+    this.toggleModal = this.toggleModal.bind(this)
 
+  }
+
+  toggleModal() {
+    this.setState({ isModalOpen: !this.state.isModalOpen })
   }
 
   handleLike() {
@@ -147,7 +154,8 @@ export default class Photo extends Component {
           <h3>{dish.name}</h3>
           <hr />
           <Card className='p-5'>
-            <CardImg src={dish.image} alt={dish.name} />
+            <CardTitle>Click on the picture to see likes</CardTitle>
+            <CardImg onClick={this.toggleModal} src={dish.image} alt={dish.name} />
             <hr />
             <details>
               <summary style={{ fontWeight: 'bold', fontSize: 'large' }}>{dish.name}</summary>
@@ -205,6 +213,16 @@ export default class Photo extends Component {
             </Form>
           </Card>
         </div>
+        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} >
+          <ModalHeader>
+            {dish.name}
+          </ModalHeader>
+          <ModalBody>
+            <CardImg src={dish.image} alt={dish.name} />
+            <CardText>This picture has {this.state.likeCount} likes.</CardText>
+            <Button color='primary' onClick={() => this.setState({likeCount : this.state.likeCount + 1})} >I like this picture!</Button>
+          </ModalBody>
+        </Modal>
       </div>
     )
   }
