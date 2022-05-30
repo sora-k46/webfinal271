@@ -1,0 +1,17 @@
+li {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+address {
+  color: black;
+  font-weight: bold;
+}
+
+.footer {
+  height: 20vh;
+  background-color: #243A73;
+}
